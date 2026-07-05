@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n =parseInt(prompt("Enter the number : "));
+        let firstNumber=0;
+        let secondNumber=1;
+        let temp =0;
+
+        //document.write(firstNumber+" , ");
+        //document.write(secondNumber+" , ")
+        for(let i=1 ; i<=n ; i++){
+            //temp = firstNumber + secondNumber;
+            document.write(temp+ " , ")
+            firstNumber=secondNumber;
+            secondNumber=temp;
+            temp = firstNumber + secondNumber;
+            //document.write(temp+" , ")
+        }
+    </script>
+</body>
+</html>

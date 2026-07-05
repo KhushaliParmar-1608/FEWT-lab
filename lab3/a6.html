@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n =parseInt(prompt("Enter the number : "));
+        let count=0;
+        let m;
+        let original=n ;
+        let sum=0;
+
+        while(n !=0 ){
+            m=n % 10
+            n=parseInt(n/10);
+            count++;
+        }
+        n=original;
+        while(n !=0 ){
+            let power = 1; 
+            m=n % 10
+            n=parseInt(n/10);
+            
+            for(let i=1 ; i<=m ; i++){
+                power=power*count;
+            }
+            sum = sum + power ;
+            //sum = sum + Math.pow(m, count);
+        }
+        if(original == sum ){
+            alert(original+ " is Armstrong number ");
+        }
+        else{
+            alert(original+ " is Armstrong number ");
+        }
+    </script>
+</body>
+</html>

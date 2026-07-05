@@ -1,0 +1,61 @@
+<!-- 2. Demonstrate different array functions like push, pop, shift, unshift, splice, sort etc… (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['Gujrat' , 'Rajasthan' , 'Delhi' , 'Kolkata'];
+
+        let push=arr.push('Goa');
+        document.write("Push : " +push);
+        document.write("<br/>");
+        document.write("Array after push : "+arr);
+        document.write("<br/>__________________________________________________");
+
+        document.write("<br/>");
+        let pop=arr.pop('Goa');
+        document.write("Pop : " +pop);
+        document.write("<br/>");
+        document.write("Array after pop : "+arr);
+        document.write("<br/>__________________________________________________");
+
+        document.write("<br/>");
+        let shift=arr.shift();
+        document.write("shift : " +shift);
+        document.write("<br/>");
+        document.write("Array after shift : "+arr);
+        document.write("<br/>__________________________________________________");
+
+        document.write("<br/>");
+        let unshift=arr.unshift('Gujrat');
+        document.write("Unshift : " +unshift);
+        document.write("<br/>");
+        document.write("Array after unshift : "+arr);
+        document.write("<br/>__________________________________________________");
+
+        document.write("<br/>");
+        let splice=arr.splice(2,1);
+        document.write("splice : " +splice);
+        document.write("<br/>");
+        document.write("Array after splice : "+arr);
+        document.write("<br/>__________________________________________________");
+
+        document.write("<br/>");
+        let slice=arr.slice(1,3);
+        document.write("slice : " +slice);
+        document.write("<br/>");
+        document.write("Array after slice : "+arr);
+        document.write("<br/>__________________________________________________");
+
+        document.write("<br/>");
+        let sort=arr.sort();
+        document.write("slice : " +sort);
+        document.write("<br/>__________________________________________________");
+
+    </script>
+</body>
+</html>

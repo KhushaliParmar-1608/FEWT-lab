@@ -1,0 +1,28 @@
+//5 4 3 2 1
+//4 3 2 1
+//3 2 1
+//2 1
+//1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter the Number : "));
+        let k=n;
+        for(let i=1 ; i<=n ; i++){
+            for(let j=1 ; j<=n-i+1 ; j++){
+                document.write(k+"  ");
+                k--;
+            }
+            k=n-i;
+            document.write("<br/>");
+        }
+    </script>
+</body>
+</html>
