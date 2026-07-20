@@ -1,0 +1,96 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>ATTENDANCE MANAGEMENT SYSTEM</h1>
+
+    <!-- Start Roll & End Roll -->
+
+    <div class="inputBox">
+
+        <label>Start Roll Number</label>
+        <input type="number" id="startRoll">
+
+        <label>End Roll Number</label>
+        <input type="number" id="endRoll"><br>
+
+        <button id="startBtn">Start Attendance</button>
+
+    </div>
+
+    <hr>
+
+    <!-- Current Roll -->
+
+    <div class="rollBox">
+
+        <h2>CURRENT ROLL NUMBER</h2>
+
+        <h1 id="currentRoll">-</h1>
+
+        <p id="status"></p>
+
+    </div>
+
+    <hr>
+
+    <!-- Summary -->
+
+    <div class="summary">
+
+        <h3>Present : <span id="presentCount">0</span></h3>
+
+        <h3>Absent : <span id="absentCount">0</span></h3>
+
+        <h3>Remaining : <span id="remainingCount">0</span></h3>
+
+    </div>
+
+    <hr>
+
+    <!-- Buttons -->
+
+    <div class="buttons">
+
+        <button id="presentBtn">
+            ✔ Present
+        </button>
+
+        <button id="absentBtn">
+            ✖ Absent
+        </button>
+
+    </div>
+
+    <hr>
+
+    <!-- Instructions -->
+
+    <div class="instruction">
+
+        <h3>Instructions</h3>
+
+        <p>➡ Right Arrow = Present</p>
+
+        <p>⬅ Left Arrow = Absent</p>
+
+        <p>You can also click the buttons.</p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
