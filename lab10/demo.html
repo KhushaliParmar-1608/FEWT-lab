@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #result {
+        position: fixed;
+        top: 100px;
+        left: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div style="width: 45%; float: left; border: 1px solid red">
+        <button onclick="changeAll(true)">Check</button>
+        <button onclick="changeAll(false)">Uncheck</button>
+        <br />
+        <script>
+          for (i = 101; i < 266; i++) {
+            document.write(
+              `<input onclick='changeAbPr()' type='checkbox' value='${i}' /> ${i} <br />`,
+            );
+          }
+        </script>
+      </div>
+      <div style="width: 45%; float: right">
+        <textarea id="result" rows="10" cols="50"></textarea>
+      </div>
+    </div>
+    <script>
+      function changeAll(temp) {
+        allStudents = document.getElementsByTagName("input");
+        for (i = 0; i < allStudents.length; i++) {
+          allStudents[i].checked = temp;
+        }
+      }
+      function changeAbPr() {
+        allStudents = document.getElementsByTagName("input");
+        absents = [];
+        for (i = 0; i < allStudents.length; i++) {
+          if (!allStudents[i].checked) {
+            absents.push(allStudents[i].value);
+          }
+        }
+        document.getElementById("result").innerHTML = absents;
+      }
+    </script>
+  </body>
+</html>

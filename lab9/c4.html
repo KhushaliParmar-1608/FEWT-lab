@@ -1,0 +1,86 @@
+<!-- 4. Create a Snake game using Java script. (C)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        width: 1000px;
+        height: 700px;
+        border: 2px solid black;
+        margin: auto;
+    }
+    .box{
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        position: relative;
+        left: 200px;
+        top: 200px;
+    }
+</style>
+<body>
+    <button >Start Game</button>
+    <div class="main">
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        currentleft=200;
+        currenttop=200;
+        intervalref=0;
+
+        function right(){
+            clearInterval(intervalref);
+            intervalref=setInterval(moveRight,5);
+        }
+        function moveRight(){
+            currentleft+=1;
+            box=document.getElementById("box");
+            box.style.left=currentleft+"px";
+        }
+        function left(){
+            clearInterval(intervalref);
+            intervalref=setInterval(moveLeft,5);
+        }
+        function moveLeft(){
+            box=document.getElementById("box");
+            box.style.left=currentleft+"px";
+        }
+        function up(){
+            clearInterval(intervalref);
+            intervalref=setInterval(moveUp,5);
+        }
+        function moveUp(){
+            currenttop-=1;
+            box=document.getElementById("box");
+            box.style.top=currenttop+"px";
+        }
+        function down(){
+            clearInterval(intervalref);
+            intervalref=setInterval(moveDown,5);
+        }
+        function moveDown(){
+            currenttop+=1;
+            box=document.getElementById("box");
+            box.style.top=currenttop+"px";
+        }
+        function controlGame(e){
+            if(e.key=="ArrowLeft"){
+                left();
+            }
+            else if(e.key=="ArrowRight"){
+                right();
+            }
+            else if(e.key=="ArrowUp"){
+                up();
+            }
+            else if(e.key=="ArrowDown"){
+                down();
+            }
+        }
+    </script>
+</body>
+</html>

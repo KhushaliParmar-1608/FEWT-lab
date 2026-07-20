@@ -1,0 +1,59 @@
+<!-- 7. WAP to perform CRUD operation on Array using HTML and JavaScript. (C)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Name : </label>
+    <input type="text" id="name">
+    <button onclick="addstudent()">Add</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name </td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody id="tableDate">
+
+        </tbody>
+    </table>
+    <script>
+        let arr = [];
+        let editendex = -1;
+        temp = '';
+        function dispaly(){
+            for(let i=0 ; i<arr.length ; i++){
+                temp += `<tr> 
+                <td>${i+1}</td>
+                <td>${arr[i]}</td>
+                <td><button onclick ="deletstudent()" >Delete</button></td>
+                </td>`;
+            }
+            console.log(temp)
+            document.getElementById("tableDate").innerHTML=temp;
+        }
+
+        function addstudent(){
+            sname = document.getElementById("name")
+            if(sname == ''){
+                alter("Please enter your name : ");
+                return;
+            }
+            arr.push(sname);
+            dispaly();
+            document.getElementById("name").value = ''
+        }
+
+        function deletstudent(i){
+            arr.splice(i,1);
+            dispaly();
+        }
+    </script>
+</body>
+</html>

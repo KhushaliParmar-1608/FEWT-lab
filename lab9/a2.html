@@ -1,0 +1,24 @@
+<!-- 2. Demonstrate the difference between let and var. (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a=10; // global scope
+        function something(){
+            var a=20; // function scope
+            if(true){
+                let a=30;//block scope
+                document.write(" In if block a = " + a);
+        }
+            document.write("<br> In function a = " + a);
+        }
+        something();
+        document.write("<br>In global a = " + a); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- 1. Demonstrate the Arrow functions. (A) -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        let a = parseInt(prompt("Enter the A :"));
+        let b = parseInt(prompt("Enter the B :"));
+
+         //if arrow function containing only one statement then we can remove the curly braces 
+        // and return keyword.
+        let sum = (a, b) => a + b;
+        document.write("Sum of (A+B) = " + sum(a, b)+"<br>");
+
+        //if arrow function containing only one parameter then we can remove the parenthesis.
+        const square = a=>a*a;
+        document.write("Square of a = "+square(a)+"<br>");
+
+      //if arrow function containing more then one perameter then we can not remove perenthrsis 
+      //and if arrow function containing more then one statement then we can not remove the curly braces
+      let multiply = (a, b) => {
+         let result = a * b;
+         return result;
+      }
+      document.write("Multiplication of (A*B) = " + multiply(a, b)+"<br>");
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,57 @@
+<!-- 2. WAP to recognize which mouse event is ƒired. (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <style>
+    #name{
+        border: 2px solid black;
+        height: 200px;
+        width: 200px;
+    }
+</style> -->
+<body>
+    <h1 id="name">Parmar Khushali</h1>
+    <h1 id="city">Tankara</h1>
+    <h1 id="state">Gujrat</h1>
+    <h1 id="contry">India</h1>
+    <p id="par1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, earum sit possimus velit iste ex deleniti quas accusantium delectus aliquid eos, suscipit in eum laudantium amet! Non temporibus suscipit odio.</p>
+    <p id="par2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, totam alias. Illum dicta rerum expedita voluptatum corrupti? Fugiat molestiae repudiandae magni, voluptate odit eveniet dolorum corrupti neque beatae recusandae atque!</p>
+    <p id="par3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, totam alias. Illum dicta rerum expedita voluptatum corrupti? Fugiat molestiae repudiandae magni, voluptate odit eveniet dolorum corrupti neque beatae recusandae atque!</p>
+    <!-- <div id="name" >
+        Perform mouse event
+    </div> -->
+    <script>
+        document.getElementById("name").addEventListener("mousedown" , function(){
+            document.getElementById("name").style.color="pink";
+        })
+
+         document.getElementById("city").addEventListener("mouseenter" , function(){
+            document.getElementById("city").style.color="pink";
+        })
+
+         document.getElementById("state").addEventListener("mouseleave" , function(){
+            document.getElementById("state").style.color="blue";
+        })
+
+         document.getElementById("contry").addEventListener("mousemove" , function(){
+            document.getElementById("contry").style.color="green";
+        })
+
+         document.getElementById("par1").addEventListener("mouseout" , function(){
+            document.getElementById("par1").style.color="orange";
+        })
+
+         document.getElementById("par2").addEventListener("mouseover" , function(){
+            document.getElementById("par2").style.color="gray";
+        })
+
+        document.getElementById("par3").addEventListener("mouseup" , function(){
+            document.getElementById("par3").style.color="yellow";
+        })
+    </script>
+</body>
+</html>

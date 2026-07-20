@@ -1,0 +1,24 @@
+<!-- 3. WAP to recognize which keyboard event is ƒired. (B)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="msg"></h1>
+    <input type="text" id="keyevent">
+    <script>
+        document.getElementById("keyevent").addEventListener("keydown" , function(){
+            document.getElementById("msg").innerHTML="keydown"
+        });
+        document.getElementById("keyevent").addEventListener("keyup" , function(){
+            document.getElementById("msg").innerHTML = "keyup"
+        });
+        document.getElementById("keyevent").addEventListener("keypress" ,function(){
+            document.getElementById("msg").innerHTML = "keypress"
+        })
+    </script>
+</body>
+</html>

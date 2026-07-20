@@ -1,0 +1,25 @@
+<!-- 2. Write JavaScript that handles following mouse event. (B) 
+• If mouse left button pressed on browser, it displayed message “Left Clicked”. 
+• If mouse right button pressed on browser, it displayed message “Right Clicked”.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="click">Click....</button>
+        <h1 id="h1"></h1>
+  <script>
+       document.getElementById("click").addEventListener("contextmenu" , ()=>{
+         document.getElementById("h1").innerHTML="Right Clicked"
+       });
+
+        document.getElementById("click").addEventListener("click" , ()=>{
+         document.getElementById("h1").innerHTML="Left Clicked"
+       });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- 1. WAP to change background color on click of button. (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <div>
+        <button id = "changecolor">Click</button>
+    </div>
+    <script>
+     document.getElementById("changecolor").addEventListener("click" , function(){
+        document.getElementById("main").style.backgroundColor = "blue"
+    });
+    </script>
+</body>
+</html>

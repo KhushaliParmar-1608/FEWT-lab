@@ -9,72 +9,99 @@ characters
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <from onsubmit="validation(event)">
-        <table>
-            <tr>
-                <td><label for="name">Name </label></td>
-                <td><input type="text" id="name" required></td>
-            </tr>
-            <tr>
-                <td><label for="e">Email</label></td>
-                <td><input type="email" id="e" required></td>
-            </tr>
-            <tr>
-                <td><label for="pw">Password</label></td>
-                <td><input type="text" id="pw" required></td>
-            </tr>
-            <tr>
-                <td><label for="cp">Conform Password</label></td>
-                <td><input type="text" id="cp"required></td>
-            </tr>
-            <tr>
-                <td><label for="g">Gender</label></td>
-                <td><input type="radio" id="g" name="Gender">Male
-                <input type="radio" id="g" name="Gender">Female</td>
-            </tr>
-            <tr>
-                <td><label for="age">Age</label></td>
-                <td><input type="number" id="age" name="Age"></td>
-            </tr>
-            <tr>
-                <td><label for="en">Enrollment No.</label></td>
-                <td><input type="number" id="en" name="en"></td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="submit">
-                </td>
-            </tr>
-        </table>
-    </from>
+    <h2>Registration Form</h2>
+
+    <form onsubmit="validateForm(event)">
+
+        Username:
+        <input type="text" id="username"><br><br>
+
+        Password:
+        <input type="password" id="password"><br><br>
+
+        Repeat Password:
+        <input type="password" id="repassword"><br><br>
+
+        Date of Birth:
+        <input type="date" id="dob"><br><br>
+
+        Age:
+        <input type="number" id="age"><br><br>
+
+        Enrollment No:
+        <input type="text" id="enroll"><br><br>
+
+        Email:
+        <input type="text" id="email"><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
     <script>
-        function validation(e){
-            e.preventDefault();
-            Name= document.getElementById("name").value;
-            email = document.getElementById("e").value;
-            Password= document.getElementById("pw").value;
-            C_Password= document.getElementById("cp").value;
-            Age= document.getElementById("age").value;
-            enrollno= document.getElementById("en").value;
 
-            pname =/^[a-zA-Z]{8}$/;
-            pemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-            ppassword =/^[0-9a-zA-z]{8,12}$/
-            page= /^[0-9]{3}$/
-            penrollno = /^[0-9]{11}$/
+        function validateForm(event) {
+            event.preventDefault();
 
-            // rn = new RegExp(pname);
-            // if(!pname.test(Name)){
-            //     alert("This name is not valid plz try again : ");
-            //     return;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let repassword = document.getElementById("repassword").value;
+            let dob = document.getElementById("dob").value;
+            let enroll = document.getElementById("enroll").value;
+            let email = document.getElementById("email").value;
+
+            if (username.length < 8) {
+                alert("Username must be at least 8 characters");
+                return;
             }
+
+            let passReg = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,12}$/;
+
+            if (!passReg.test(password)) {
+                alert("Password must be 8-12 chars, 1 digit & 1 special character");
+                return;
+            }
+
+            if (password != repassword) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            
+            let age 
+
+            if (age < 18) {
+                alert("Age must be greater than 18");
+                return;
+            }
+
+            let enrollRegex = /^[0-9]{11}$/;
+
+            if (!enrollRegex.test(enroll)) {
+                alert("Enrollment must be  11 digits");
+                return;
+            }
+
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                alert("Invalid email format");
+                return;
+            }
+
+            alert("Form Submitted ");
         }
+
     </script>
+
 </body>
+
 </html>

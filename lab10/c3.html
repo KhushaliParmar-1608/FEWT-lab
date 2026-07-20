@@ -1,0 +1,92 @@
+<!-- 3. Write a JavaScript having a list of checkbox and by clicking on checkbox, it should show list of 
+selected value in comma separated format. (e.g. list of roll number as checkbox value, and display 
+selected roll number in comma separated format) (C) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 30%;
+            float: left;
+            border: 3px solid black;
+            background-color: lightpink;
+        }
+
+        .b1 {
+            height: 30px;
+            width: 100px;
+            border-radius: 1px solid black;
+            background-color: lightgreen;
+            color: aliceblue;
+        }
+
+        .b2 {
+            height: 30px;
+            width: 100px;
+            border-radius: 1px solid black;
+            background-color: lightcoral;
+            color: aliceblue;
+        }
+
+        .div2 {
+            width: 50px;
+            border: 2px solid black;
+            float: right;
+        }
+
+        #result {
+            position: fixed;
+            top: 50px;
+            left: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        <button class="b1" onclick="changeAll(true)">Checked</button>
+        <button class="b2" onclick="changeAll(false)">Uncheked</button>
+
+        </br></br></br>
+        <script>
+            let a = parseInt(prompt("Enter the starting roll number"));
+            let b = parseInt(prompt("Enter the ending roll number"));
+
+            if(a>b){
+                alert("Plase enter valid input start with a and ands with b ");
+            }
+            for (let i = a; i <= b; i++) {
+                document.write(
+                    `<input onclick='changeAbPr()' type='checkbox' value='${i}' /> ${i} <br />`,
+                );
+            }
+        </script>
+    </div>
+    <div class="div2">
+        <textarea id="result" rows="10" cols="50"></textarea>
+    </div>
+    <script>
+        function changeAll(temp) {
+            allStudents = document.getElementsByTagName("input");
+            for (i = 0; i < allStudents.length; i++) {
+                allStudents[i].checked = temp;
+            }
+        }
+        function changeAbPr() {
+            allStudents = document.getElementsByTagName("input");
+            absents = [];
+            for (i = 0; i < allStudents.length; i++) {
+                if (!allStudents[i].checked) {
+                    absents.push(allStudents[i].value);
+                }
+            }
+            document.getElementById("result").innerHTML = absents;
+        }
+    </script>
+</body>
+
+</html>
