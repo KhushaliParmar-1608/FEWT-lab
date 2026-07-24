@@ -1,0 +1,37 @@
+<!-- 4. Demonstrate the Array and Object Destructuring. (B)  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        // const a = [1,2,3,4];
+        // const b =[5,6,7,8];
+
+        let name = 'khushali';
+        let[a1 , a2 ,...rest]=name;
+        console.log("a1 : ",a1);
+        console.log("a2 : ",a2);
+        console.log("rest : ",rest);
+
+        const person = {
+            fname : 'khushali',
+            lname :'parmar',
+            department : 'CSE',
+            rollNo : 164,
+            enrollNo : 25010101179,
+            collage : 'Darshan univarsity',
+            city: 'Tankara',
+            state :'Gujrat',
+            contry : 'India'
+        }
+        let {fname , lname , ...any} = person;
+        console.log("First name :",fname);
+        console.log("Last name :",lname);
+        console.log("Any : ",any)
+    </script>
+ </body>
+ </html>
