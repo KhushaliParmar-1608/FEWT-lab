@@ -1,0 +1,29 @@
+<!-- 3. write a jQuery program to set content of h1 to "Hello World" when use click on button. (A)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    span{
+        color: blueviolet;
+    }
+</style>
+<body>
+    <h1 id="myH1"></h1>
+    <button id="myBtn">Click</button>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script>
+        $("#myBtn").click(() => {
+            // $("#myH1").text("Hello world");
+            $("#myH1").html("Hello world with <span>Html</span>")
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!-- 4. write a jQUery program to get content of textbox and set to paragraph with "data" class. (B)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myTxt">
+    <p id="myP"></p>
+    <button id="myBtn">Click</button>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script>
+        $("#myBtn").click(() => {
+            $("#myP").text($("#myTxt").val());
+        })
+    </script>
+</body>
+</html>

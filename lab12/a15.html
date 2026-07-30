@@ -1,0 +1,44 @@
+<!-- 15. write a jQuery program to set background of an element to red when mouse enter on all 
+paragraphs (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea impedit accusamus, officiis accusantium neque
+        necessitatibus iure debitis. Laborum nisi ipsum totam fugiat sequi, ratione eligendi natus, reiciendis, at
+        accusantium beatae.</p>
+    <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ea impedit accusamus, officiis accusantium neque
+        necessitatibus iure debitis. Laborum nisi ipsum totam fugiat sequi, ratione eligendi natus, reiciendis, at
+        accusantium beatae.</p>
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea impedit accusamus, officiis accusantium neque
+        necessitatibus iure debitis. Laborum nisi ipsum totam fugiat sequi, ratione eligendi natus, reiciendis, at
+        accusantium beatae.</p>
+    <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ea impedit accusamus, officiis accusantium neque
+        necessitatibus iure debitis. Laborum nisi ipsum totam fugiat sequi, ratione eligendi natus, reiciendis, at
+        accusantium beatae.</p>
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea impedit accusamus, officiis accusantium neque
+        necessitatibus iure debitis. Laborum nisi ipsum totam fugiat sequi, ratione eligendi natus, reiciendis, at
+        accusantium beatae.</p>
+    <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Ea impedit accusamus, officiis accusantium neque
+        necessitatibus iure debitis. Laborum nisi ipsum totam fugiat sequi, ratione eligendi natus, reiciendis, at
+        accusantium beatae.</p>
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script>
+        $("p").mouseenter(function () {
+            $(this).css("background-color", "red");
+        }).mouseleave(function () {
+            $(this).css("background-color", "white");
+        });
+    </script>
+</body>
+
+</html>

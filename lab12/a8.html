@@ -1,0 +1,28 @@
+<!-- 8. write a jQuery to hide all siblings when clicked on a button. (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="MyUl">
+        <li>OOPJ</li>
+        <li>T-SQL</li>
+        <li id="myLi">C++</li>
+        <li>CPC</li>
+        <li>FEWT</li>
+    </ul>
+    <button id="myBtn">Click</button>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script>
+        $("#myBtn").click(() => {
+            $("#myLi").siblings().hide();
+        })
+    </script>
+</body>
+
+</html>

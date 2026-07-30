@@ -1,0 +1,24 @@
+<!-- 14. write a jQuery program to set background of an input element to red when in focus and back to 
+white when not in focus. (A)  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="myInput" placeholder="Click me and focus">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script>
+        $("#myInput").focus(function () {
+            $(this).css("background-color", "red");
+        }).blur(function () {
+            $(this).css("background-color", "white");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!-- 1. write a jQuery to fade object when clicked on it. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="name">Parmar khushali</h1>
+    <button id="myBtn">Click</button>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <script>
+        $("#myBtn").click(() => {
+            $("#name").fadeToggle(2000, () => {
+                alert("given content is fadeToggle");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!-- 6. write a jQuery program to append new row to existing table when clicked on button. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="myTable" border="2">
+        <thead>
+            <th>Name</th>
+            <th>SPI</th>
+            <th>Enrollment number</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Khushali</td>
+                <td>8.16</td>
+                <td>25010101179</td>
+            </tr>
+            <tr>
+                <td>Mira</td>
+                <td>8.96</td>
+                <td>25010101180</td>
+            </tr>
+            <tr>
+                <td>Vihan</td>
+                <td>8.16</td>
+                <td>25010101120</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="myBtn">Click</button>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+
+    <script>
+        $("#myBtn").click(() => {
+            $("#myTable").append(`
+                 <tr>
+                <td>Meet</td>
+                <td>8.16</td>
+                <td>25010101190</td>
+            </tr>
+            `)
+        });
+    </script>
+
+</body>
+
+</html>

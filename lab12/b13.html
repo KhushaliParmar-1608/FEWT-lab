@@ -1,0 +1,28 @@
+<!-- 13. write a jQuery program to hide an element which was clicked (B).  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <ul>
+        <li>OOPJ</li>
+        <li>CPC</li>
+        <li>FEWT</li>
+        <li>T-SQL</li>
+        <li>DS</li>
+        <li>WD</li>
+    </ul>
+    <script>
+        $("li").click(function () {
+            $(this).hide();
+        })
+    </script>
+</body>
+
+</html>
