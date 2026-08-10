@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <div id="mydiv">
+        <ul id="myUL">
+            <li>Rajkot</li>
+            <li id="Myli">morbi</li>
+            <li>ahemdabad</li>
+            <li>surat</li>
+        </ul>
+        <button id="myBtn">Click</button>
+    </div>
+    <script>
+        $("#myBtn").click(() => {
+            //Ancenstors (parent , parents , parentsUntil)
+            console.log($("#Myli").parent);
+        })
+    </script>
+</body>
+
+</html>

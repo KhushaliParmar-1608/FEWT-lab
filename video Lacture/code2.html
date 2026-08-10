@@ -1,0 +1,26 @@
+<!-- jQuary selectors -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <h1 id="idH1">Hello world with id selector</h1>
+    <h1 class="classH1">Hello world with class selector</h1>
+    <h1> Hello world with tag selector</h1>
+    <button id="btn">Click me</button>
+    <script>
+        $("#btn").click(() => {
+            $("#idH1").hide();
+            $(".classH1").hide();
+            $("h1").hide();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <h1 id="myH1">Hello world 1</h1>
+    <h1 class="myH1">Hello world 2</h1>
+    <!-- <button id="myBtn1">Hide</button>
+    <button id="myBtn2">Show</button> -->
+    <button id="myBtn">Click</button>
+
+
+    <script>
+        //Hide & Show Method
+        // $("#myBtn1").click(() => {
+        //     $("#myH1").hide();
+        //     $(".myH1").hide();
+        // })
+        // $("#myBtn2").click(() => {
+        //     $("#myH1").show();
+        //     $(".myH1").show();
+        // })
+
+        //Toggle Method
+        // $("#myBtn").click(() => {
+        //     $("#myH1").toggle();
+        //     $(".myH1").toggle();
+        // })
+
+        //fadeIn & fadeOut Method
+        // $("#myBtn1").click(() => {
+
+        //     $("#myH1").fadeOut(5000);
+        //     $(".myH1").fadeOut(5000);
+        // });
+        // $("#myBtn2").click(() => {
+
+        //     $("#myH1").fadeIn(5000);
+        //     $(".myH1").fadeIn(5000);
+        // });
+
+        //FadeToggle Method
+        // $("#myBtn").click(() => {
+        //     $("#myH1").fadeToggle(3000);
+        //     $(".myH1").fadeToggle(2000);
+        // });
+
+        //Callback with fadetoggle Method
+        $("#myBtn").click(() => {
+            $("#myH1").fadeToggle(3000, () => {
+                alert("Hello World");
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

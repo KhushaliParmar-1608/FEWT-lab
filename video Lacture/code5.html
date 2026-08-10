@@ -1,0 +1,78 @@
+<!-- HTML Manipulation in jQuery -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span {
+        color: red;
+    }
+
+    .redBG {
+        background-color: red;
+    }
+
+    .buleBg {
+        background-color: blue;
+    }
+
+    #myH1 {
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@4.0.0/dist/jquery.min.js"></script>
+    <h1 id="myH1" class="blueBG">Hello world 1</h1>
+    <h1 class="myH1">Hello world 2</h1>
+    <input type="text" id="myInput" />
+    <div id="myDiv">
+        Hello <span>World</span>
+    </div>
+    <!-- <input type="text" id="myinput">
+    <ul id="myul">
+        <li>Rajkot</li>
+        <li id="myLi">Morbi</li>
+        <li>Surat</li>
+        <li>jamnagar</li>
+    </ul> -->
+    <button id="myBtn">Click</button>
+
+    <script>
+        $("#myBtn").click(() => {
+            //get (text , html , val )
+            // console.log($("#myDiv").text());
+            // console.log($("#myDiv").html());
+            // console.log($("#myInput").val());
+
+            //set (text , html , val )
+            // $("#myDiv").text("Khushali parmar");
+            // $("#myDiv").html("khushali <h1>Parmar</h1>");
+            // $("#myInput").val("Khushali parmar");
+
+            //add(append , prepend , after , before)
+            // $("#myul").append("<li>Ahemdabad</li>")
+            // $("#myul").append("<li>" + $('#myinput').val() + "</li>")
+            // $("#myul").prepend("<li>Ahemdabad</li>")
+            // $("#myul").after("<li>Ahemdabad</li>")
+            // 
+
+            //Remove (Remove , empty)
+            // $("#myul").empty()
+            // $("#myul").remove()
+
+            //css class(add class , remove class , toggle class)
+            // $("#myH1").addClass("redBG")
+            // $("#myH1").removeClass("blueBg");
+
+            // $("#myH1").css("background-color", "pink")
+            console.log($("#myH1").css("font-size"))
+        });
+    </script>
+</body>
+
+</html>
