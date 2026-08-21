@@ -1,5 +1,13 @@
 import { useState } from "react";
 
+//Lab 21
+import UseStateDemo from "./lab 21/UseStateDemo";
+// import UseEffectDemo from "./lab 21/UseEffectDemo";
+
+//Lab 20
+// import A2_MainPage from "./lab 20/A2/A2_MainPage";
+// import A1_MainPage from "./lab 20/A1/A1_MainPage";
+
 //Lab 17
 // import FacultiesMap from "./lab 17/FacultiesMap";
 // import ProductsMap from "./lab 17/ProductsMap";
@@ -25,7 +33,9 @@ function App() {
       {/* <Helloc /> */}
       {/* <HelloFunction /> */}
 
-      <MainPage />
+      {/* Lab 15 */}
+      {/* <MainPage /> */}
+
       {/* Lab 16 */}
       {/* <Props /> */}
       {/* <EventDemo /> */}
@@ -36,6 +46,14 @@ function App() {
       {/* <StudentsMap /> */}
       {/* <ProductsMap /> */}
       {/* <FacultiesMap /> */}
+
+      {/* Lab 20 */}
+      {/* <A1_MainPage /> */}
+      {/* <A2_MainPage /> */}
+
+      {/* Lab 21 */}
+      <UseStateDemo />
+      {/* <UseEffectDemo /> */}
     </>
   );
 }
