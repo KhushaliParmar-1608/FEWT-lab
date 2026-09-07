@@ -1,12 +1,20 @@
 import { useState } from "react";
+import SimpleCalc from "./lab 22/SimpleCalc";
 
 //Lab 21
-import UseStateDemo from "./lab 21/UseStateDemo";
+// import UseStateDemo from "./lab 21/UseStateDemo";
 // import UseEffectDemo from "./lab 21/UseEffectDemo";
 
 //Lab 20
 // import A2_MainPage from "./lab 20/A2/A2_MainPage";
 // import A1_MainPage from "./lab 20/A1/A1_MainPage";
+
+//Lab 19
+// import AppContant from "./lab 19/AppContant";
+
+//Lab 18
+// import Lab18A1App from "./lab 18/A1/Lab18A1App";
+// import Lab18B2App from "./lab 18/B2/Lab18B2App";
 
 //Lab 17
 // import FacultiesMap from "./lab 17/FacultiesMap";
@@ -47,13 +55,23 @@ function App() {
       {/* <ProductsMap /> */}
       {/* <FacultiesMap /> */}
 
+      {/* Lab 18 */}
+      {/* <Lab18A1App /> */}
+      {/* <Lab18B2App /> */}
+
+      {/* Lab 19 */}
+      {/* <AppContant /> */}
+
       {/* Lab 20 */}
       {/* <A1_MainPage /> */}
       {/* <A2_MainPage /> */}
 
       {/* Lab 21 */}
-      <UseStateDemo />
+      {/* <UseStateDemo /> */}
       {/* <UseEffectDemo /> */}
+
+      {/* lab 22 */}
+      <SimpleCalc />
     </>
   );
 }
