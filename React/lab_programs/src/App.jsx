@@ -1,5 +1,6 @@
 import { useState } from "react";
-import SimpleCalc from "./lab 22/SimpleCalc";
+import ScientificCalc from "./lab 22/ScientificCalc";
+// import SimpleCalc from "./lab 22/SimpleCalc";
 
 //Lab 21
 // import UseStateDemo from "./lab 21/UseStateDemo";
@@ -71,7 +72,8 @@ function App() {
       {/* <UseEffectDemo /> */}
 
       {/* lab 22 */}
-      <SimpleCalc />
+      {/* <SimpleCalc /> */}
+      <ScientificCalc />
     </>
   );
 }
