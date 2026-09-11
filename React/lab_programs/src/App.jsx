@@ -1,5 +1,8 @@
 import { useState } from "react";
-import ScientificCalc from "./lab 22/ScientificCalc";
+import StudentsCRUD from "./Lab 23/StudentsCRUD";
+
+//Lab 22
+// import ScientificCalc from "./lab 22/ScientificCalc";
 // import SimpleCalc from "./lab 22/SimpleCalc";
 
 //Lab 21
@@ -73,7 +76,10 @@ function App() {
 
       {/* lab 22 */}
       {/* <SimpleCalc /> */}
-      <ScientificCalc />
+      {/* <ScientificCalc /> */}
+
+      {/* Lab 23 */}
+      <StudentsCRUD />
     </>
   );
 }

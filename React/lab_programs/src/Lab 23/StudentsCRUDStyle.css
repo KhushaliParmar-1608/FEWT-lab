@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  width: 220px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #aaa;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+td {
+  background-color: #f5f5f5;
+}
